@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Diamond Generation</title>
+</head>
+<body>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Avenir', 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background-color: #ffffff;
+    } 
+
+    header {
+      background-color: #ffffff;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-area img {
+      width: 100px;
+      height: auto;
+    }
+
+    .logo-area h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      color: #ffde59;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: auto;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0033cc;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffde59;
+    }
+
+    .button-link {
+      padding: 0.6rem 1rem;
+      border-radius: 5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .buy-ticket {
+      background-color: #ffde59;
+      color: #0033cc;
+    }
+
+    .buy-ticket:hover {
+      background-color: #ffc800;
+    }
+
+    .register {
+      background-color: #0033cc;
+      color: #ffffff;
+    }
+
+    .register:hover {
+      background-color: #002bb8;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 1.2rem;
+        gap: 1rem;
+      }
+    }
+  </style>
+
+  <header>
+    <!-- Logo + Title -->
+    <div class="logo-area">
+      <img src="The diamond logo.png" alt="Diamond Logo" />
+      <h1>The Diamond Generation</h1>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#tickets" class="button-link buy-ticket">Buy Ticket</a>
+      <a href="#register" class="button-link register">Register</a>
+    </nav>
+  </header>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+    }
+
+    .hero-section img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    }
+
+    .hero-section h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #ffde59;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-section p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #e0e0e0;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .hero-buttons button {
+      font-size: 1rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s ease;
+    }
+
+    .hero-buttons .register {
+      background-color: #ffde59;
+      color: #0033cc;
+    }
+
+    .hero-buttons .register:hover {
+      background-color: #ffc800;
+    }
+
+    .hero-buttons .contact {
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+
+    .hero-buttons .contact:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+
+      .hero-section p {
+        font-size: 1.1rem;
+      }
+
+      .hero-buttons button {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <section class="hero-section">
+    <h1>Empowering Nigerian Youth To Rise and Lead The Future</h1>
+    <p>Join a national movement raising a million purpose-driven young Nigerians through mentorship, innovation, and enterprise. We are more than a movement—we are a mission. A collective effort to raise a new breed of resilient, self-sufficient young Nigerians ready to transform society through purpose, discipline, and innovation. Whether you’re a youth with a dream or a seasoned changemaker, there's a place for you here.
+</p>
+    <div class="hero-buttons">
+      <button class="register">Register Now</button>
+      <button class="contact">Contact Us</button>
+    </div>
+  </section>
+
+</body>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', 'Segoe UI', sans-serif;
+      background-color: #000;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      border-bottom: 1px solid #e0e0e0;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-area img {
+      width: 100px;
+      height: auto;
+    }
+
+    .logo-area h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      color: #800020;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: auto;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0033cc;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #800020;
+    }
+
+    .button-link {
+      padding: 0.6rem 1rem;
+      border-radius: 5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .buy-ticket {
+      background-color: #ffde59;
+      color: #0033cc;
+    }
+
+    .buy-ticket:hover {
+      background-color: #ffc800;
+    }
+
+    .register {
+      background-color: #0033cc;
+      color: #ffffff;
+    }
+
+    .register:hover {
+      background-color: #002bb8;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 1.2rem;
+        gap: 1rem;
+      }
+    }
+
+    section {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 6rem auto;
+      background-color: rgba(255, 255, 255, 0.92);
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #800020;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      color: #111;
+    }
+
+    strong {
+      color: #800020;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="background"></canvas>
+
+  
+  <section id="about">
+    <h2>About Us</h2>
+    <p><strong>The Diamond Generation</strong> is an initiative founded by <strong>Dr. Michael Okoli (The Entrepreneur Mentor)</strong> to empower young Nigerians aged 18 to 28.</p>
+    <p>In response to widespread unemployment, dependency culture, and technological disruption, this movement was born to build a future-ready generation.</p>
+    <p>Our goal is to raise a million young entrepreneurs who will transform the landscape and society through mentorship, discipline, and entrepreneurship.</p>
+    <p>We are shifting mindsets—from dependency to self-leadership, from waiting for opportunities to <strong>creating them</strong>.</p>
+  </section>
+
+  <script>
+    const canvas = document.getElementById('background');
+    const ctx = canvas.getContext('2d');
+    let circles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    class Circle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.radius = Math.random() * 40 + 10;
+        this.dx = (Math.random() - 0.5) * 1;
+        this.dy = (Math.random() - 0.5) * 1;
+        this.color = `rgba(128, 0, 32, ${Math.random() * 0.3 + 0.2})`;
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+
+      update() {
+        this.x += this.dx;
+        this.y += this.dy;
+        if (this.x > canvas.width || this.x < 0) this.dx *= -1;
+        if (this.y > canvas.height || this.y < 0) this.dy *= -1;
+        this.draw();
+      }
+    }
+
+    for (let i = 0; i < 60; i++) {
+      circles.push(new Circle());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      circles.forEach(c => c.update());
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</body>
+</html>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services-grid">
+    <div class="service-box">
+      <h3>💡 Mentorship</h3>
+      <p>Grow confident leaders through personal and group coaching led by industry veterans.</p>
+    </div>
+    <div class="service-box">
+      <h3>🚀 Bootcamps</h3>
+      <p>Launch bold ideas across Nigerian cities with hands-on innovation labs and leadership challenges.</p>
+    </div>
+    <div class="service-box">
+      <h3>🤝 Collaborators</h3>
+      <p>Unite changemakers and mentors in a vibrant, impact-driven community of support.</p>
+    </div>
+    <div class="service-box">
+      <h3>🎤 Conferences</h3>
+      <p>Host epic gatherings that spark personal transformation and collective momentum.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  #services {
+    padding: 4rem 2rem;
+    background: rgba(255,255,255,0.95);
+    text-align: center;
+  }
+
+  #services h2 {
+    font-size: 2.5rem;
+    color: #800020;
+    margin-bottom: 2rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .service-box {
+    background: #fff;
+    border: 2px solid #800020;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease;
+  }
+
+  .service-box:hover {
+    transform: translateY(-5px);
+  }
+
+  .service-box h3 {
+    color: #800020;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .service-box p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diamond Generation Ticket Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #800020;
+      margin-bottom: 2rem;
+    }
+
+    .container {
+      background-color: rgba(255,255,255,0.96);
+      border-radius: 12px;
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+
+    .card {
+      background-color: #fff;
+      border: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      flex: 1 1 calc(33% - 2rem);
+    }
+
+    .card h5 {
+      color: #0033cc;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      color: #333;
+      font-size: 1.05rem;
+    }
+
+    /* Banner */
+    .register-banner {
+      background-color: #800020;
+      color: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .register-banner h2 {
+      font-size: 2.4rem;
+      color: #ffde59;
+      margin-bottom: 1rem;
+    }
+
+    .register-banner p {
+      font-size: 1.2rem;
+      color: #fbeacc;
+      margin-bottom: 2rem;
+    }
+
+    .register-banner button {
+      background-color: #ffde59;
+      color: #800020;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .register-banner button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Popup */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      backdrop-filter: blur(5px);
+      background: rgba(0,0,0,0.7);
+      z-index: 99;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-form {
+      background: #fff;
+      color: #111;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 450px;
+      width: 90%;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      position: relative;
+      text-align: center;
+    }
+
+    .popup-form h3 {
+      font-size: 1.8rem;
+      color: #800020;
+      margin-bottom: 1.5rem;
+    }
+
+    .popup-form input {
+      width: 100%;
+      padding: 0.9rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .popup-form button {
+      background-color: #800020;
+      color: #fff;
+      font-weight: bold;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #800020;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column;
+      }
+    }
+  </style>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diamond Generation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: #2a2a2a;
+    }
+
+    .services {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #fff;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      padding: 30px;
+      border-radius: 8px;
+      width: 300px;
+    }
+
+    .register-banner {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 50px 20px;
+    }
+
+    .register-banner button {
+      padding: 12px 24px;
+      font-size: 1em;
+      background-color: #ffcc00;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .popup-form {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      position: relative;
+    }
+
+    .popup-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .popup-form button[type="submit"] {
+      padding: 10px 20px;
+      background-color: #1e3c72;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px; right: 10px;
+      background: transparent;
+      border: none;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- What We Stand For -->
+  <section id="stand">
+    <h2>Who We Are. What We Stand For</h2>
+    <div class="services">
+      <div class="card">
+        <h5>Our Mission</h5>
+        <p>We mentor and equip young Nigerians with the mindset, skills, and confidence to shift from dependence to self-sufficiency — rewriting the nation’s future through enterprise, leadership, and innovation.</p>
+      </div>
+      <div class="card">
+        <h5>Our Vision</h5>
+        <p>A Nigeria driven by youth-powered innovation and purpose-driven leadership, where young changemakers thrive and create value for the continent and beyond.</p>
+      </div>
+      <div class="card">
+        <h5>Our Values</h5>
+        <p>Empowerment, discipline, mentorship, creativity, and impact. These values spark the Diamond Generation — a force for transformation across Nigeria and beyond, fueling innovation, leadership, and lasting change.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Register Now Banner -->
+  <section class="register-banner" id="register">
+    <h2>Register Now & secure your spot</h2>
+    <p>Be part of the movement. Join thousands of young innovators across Nigeria for a transformational experience!</p>
+    <button onclick="openPopup()">Get My Ticket 🎟️</button>
+  </section>
+
+  <!-- Popup Form -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-form">
+      <button class="close-btn" onclick="closePopup()">×</button>
+      <h3>Secure Your Spot</h3>
+      <input type="text" placeholder="Full Name" />
+      <input type="email" placeholder="Email Address" />
+      <input type="tel" placeholder="Phone Number" />
+      <button type="submit">Submit Registration</button>
+    </div>
+  </div>
+
+
+  <!-- Popup Script -->
+  <script>
+    function openPopup() {
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diamond Project</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    /* Register Form */
+    .register-form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .register-form input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .register-form button {
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .register-form button:hover {
+      background-color: #218838;
+    }
+
+    /* Contact Section */
+    #contact a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer - Laserline Inspired */
+    footer {
+      background-color: #111;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    .footer-top {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-column {
+      flex: 1 1 200px;
+      min-width: 200px;
+    }
+
+    .footer-column h4 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      color: #ffcc00;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-column ul li a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    .footer-column ul li a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    @media screen and (max-width: 768px) {
+      .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Register Now -->
+  <section id="register">
+    <h2>Register Now</h2>
+    <p>Event Ticket: <strong>₦10,000</strong></p>
+    <div class="register-form">
+      <input type="text" id="fullName" placeholder="Full Name" required />
+      <input type="email" id="emailAddress" placeholder="Email Address" required />
+      <input type="tel" id="phoneNumber" placeholder="Phone Number" required />
+      <button onclick="payWithPaystack()">Buy Ticket</button>
+    </div>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📧 Email: <a href="mailto:hello@diamondgeneration.org">hello@diamondgeneration.org</a></p>
+    <p>📞 Phone: <a href="tel:+2348001234567">+234 800 123 4567</a></p>
+  </section>
+
+  <!-- Footer - Laserline Style -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-column">
+        <h4>Diamond Project</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#stand">Vision</a></li>
+          <li><a href="#register">Register</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 Diamond Project. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Paystack Integration -->
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script>
+    function payWithPaystack() {
+      let name = document.getElementById("fullName").value;
+      let email = document.getElementById("emailAddress").value;
+      let phone = document.getElementById("phoneNumber").value;
+
+      let handler = PaystackPop.setup({
+        key: 'YOUR_PUBLIC_KEY_HERE', // Replace with your actual Paystack public key
+        email: email,
+        amount: 1000000, // ₦10,000 in Kobo
+        currency: 'NGN',
+        metadata: {
+          custom_fields: [
+            { display_name: "Full Name", variable_name: "full_name", value: name },
+            { display_name: "Phone Number", variable_name: "phone", value: phone }
+          ]
+        },
+        callback: function(response) {
+          alert("Payment successful! Reference: " + response.reference);
+        },
+        onClose: function() {
+          alert("Payment window closed.");
+        }
+      });
+
+      handler.openIframe();
+    }
+  </script>
+
+</body>
+</html>
+
+</body>
+
+</html>
